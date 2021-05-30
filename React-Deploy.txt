@@ -1,0 +1,39 @@
+        ********************
+     **** DEPLOY React-app ****
+        ********************
+
+Create a Repositery in github.io (as your project name)
+
+Create a folder for our project.
+
+Open that folder in VS Code.
+
+Create React-App.
+->Open terminal
+Then-->
+-->npx create-react-app appname
+-->npm install gh-pages -D
+
+Add Script in (package.json).
+[add these lines Under script block]
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build"
+
+ Install git in your system.   
+-->git init
+-->git add .
+-->git commit -m "initial commit"
+-->git config --global user.email "yourEmail@gmail.com"
+-->git config --global user.name "yourGithubUsername"
+-->git remote add origin https://github.com/yourGithubUsername/yourrRepositeryName.git 
+-->git remote (For check remote is origin)
+
+Then-->
+-->(add this at package.json {4th line}) ==>  
+    "homepage": "https://yourGithubUsername.github.io/yourrRepositeryName" (this is URL of our repositery)
+
+Then-->    
+-->npm run deploy
+
+-->enter your username & password 
+-->it will publish
